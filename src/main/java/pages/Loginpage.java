@@ -20,47 +20,52 @@ public class Loginpage extends DriverFactory{
 	
 	@FindBy(xpath="//p[text()='login']")
 	public WebElement loginButton;
+	public void clickloginButton() {
+		loginButton.click();
+	}
 	
 	@FindBy(xpath="//input[@name='email']")
 	public WebElement emailid;
+	public void enteremail() {
+		 emailid.sendKeys("test@test.com");
+	}
 	
 	@FindBy(xpath="//input[@name='password']")
 	public WebElement password;
-	
-	@FindBy(xpath="//p[text()='sign in']")
-	public WebElement signin;
-	
-	@FindBy(xpath="//button[@type='button']")
-			public WebElement CreateAccountButton;
-			
-	
-	
-
-public void clickloginButton() {
-	loginButton.click();
-}
-
-
-
-public void enteremail() {
-	 emailid.sendKeys("test@test.com");
-}
-
-
-
-public void enterpassword() {
+	public void enterpassword() {
 		password.sendKeys("test123");
 		
 
 	}
-public void signin() {
 	
-	signin.click();
+	@FindBy(xpath="//p[text()='sign in']")
+	public WebElement signin;
+	public void signin() {
+		
+		signin.click();
+		
+	}
 	
-}
+	@FindBy(xpath="//button[@type='button']")
+			public WebElement CreateAccountButton;
+
 public void clickCreateAccountButton() {
 	
 	CreateAccountButton.click();
+			
+	
+	
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 	

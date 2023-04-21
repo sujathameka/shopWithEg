@@ -25,8 +25,38 @@ public class Createaccountpage extends DriverFactory{
 			wait.until(ExpectedConditions.elementToBeClickable(account));
 			account.click();
 		
-	}
-}
+		
+		}
+		
+		@FindBy(xpath="//input[@name='firstName']")
+		public WebElement firstname;
+		public void firstName() {
+			wait.until(ExpectedConditions.elementToBeClickable(firstname));
+		firstname.sendKeys("q");
+		
+		}
+		
+		@FindBy(xpath="//p[text()='create account']")
+		public WebElement createaccount;
+		public void CreateAccount() {
+			wait.until(ExpectedConditions.elementToBeClickable(createaccount));
+			createaccount.click();
+			
+		}
+		
+		@FindBy(xpath="//p[text()='First name must be 2 to 30 characters']")
+		public WebElement error;
+		public void errorvalidation() {
+			wait.until(ExpectedConditions.elementToBeClickable(error));
+			Boolean geterror=error.isDisplayed();
 
+
+			
+			
+		
+		
+
+		}
+}
 
 	

@@ -63,12 +63,16 @@ public void user_clicks_on_create_account_button() {
 
 @When("user eneters firstname with lessthan two characters")
 public void user_eneters_firstname_with_lessthan_characters(Integer int1) {
-    
+	
+    createaccountpage.firstName();
+    createaccountpage.createaccount();
 }
 
 
 @Then("validate the erorr message")
 public void validate_the_erorr_message() {
+	
+	createaccountpage.errorvalidation();
 
 	
 }
